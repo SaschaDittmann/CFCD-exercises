@@ -10,7 +10,7 @@
 - Scaling (horizontal/vertical)
 - Application manifests
 
-## Questions
+## Exercises
 
 ### Create a new app named 'my-app' located in the current directory with a memory limit of 1 GB and a disk limit of 1 GB, and let Cloud Foundry detect the required buildpack
 
