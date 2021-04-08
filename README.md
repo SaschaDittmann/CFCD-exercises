@@ -17,8 +17,8 @@ Make a mental note of the breadcrumb at the start of the excercise section, to q
 ## Contents
 
 - [Basics](basics.md)
-- [Application Lifecycle](application_lifecycle.md)
 - [Application Management](application_management.md)
+- [Application Lifecycle](application_lifecycle.md)
 - [Platform Security](platform_security.md)
 - [Routing](routing.md)
 - [Services](services.md)
