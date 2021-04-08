@@ -1,6 +1,8 @@
 ![](https://ga4gh.azurewebsites.net/api?repo=CFCD-exercises/services&empty)
 # Services
 
+## Topics
+
 - Service brokers
 - Managed services
 - Service instance lifecycle & use
