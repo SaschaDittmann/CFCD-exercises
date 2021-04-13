@@ -1,4 +1,4 @@
-![](https://ga4gh.azurewebsites.net/api?repo=CFCD-exercises/application_management&empty)
+![](https://ga4gh.datainsights.cloud/api?repo=CFCD-exercises/application_management&empty)
 # Application Management
 
 ## Topics

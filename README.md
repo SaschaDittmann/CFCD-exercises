@@ -1,6 +1,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![unofficial Google Analytics for GitHub](https://ga4gh.azurewebsites.net/api?repo=CFCD-exercises)](https://github.com/SaschaDittmann/gaforgithub)
+[![unofficial Google Analytics for GitHub](https://ga4gh.datainsights.cloud/api?repo=CFCD-exercises)](https://github.com/SaschaDittmann/gaforgithub)
 
 # CKAD Exercises
 
