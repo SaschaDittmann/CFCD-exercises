@@ -85,6 +85,72 @@ cf logs my-app --recent
 </p>
 </details>
 
+### View the current targeted organization and space
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf target
+```
+
+</p>
+</details>
+
+### List all organizations
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf orgs
+```
+
+Alternatively, you can use the alias 'o'
+
+```bash
+cf o
+```
+
+</p>
+</details>
+
+### Set the targeted organization to 'my-org'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf target -o my-org
+```
+
+</p>
+</details>
+
+### List all spaces in the current organization
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf spaces
+```
+
+</p>
+</details>
+
+### Set the targeted space to 'dev' in the current organization
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf target -s dev
+```
+
+</p>
+</details>
+
 <!--What commands are not listed when using the cf -h?
 What does the cf target command do?
 What command would you use to list all spaces in your Cloud Foundry organization?
