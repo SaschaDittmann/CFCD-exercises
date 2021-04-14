@@ -4,7 +4,7 @@
 
 # CKAD Exercises
 
-A set of exercises that helped me prepare for the [Cloud Foundry Certified Developer (CFCD)](https://training.linuxfoundation.org/certification/cloud-foundry-certified-developer-cfcd/) exam, offered by the Linux Foundation, organized by curriculum domain. They may as well serve as learning and practicing with Kubernetes.
+A set of exercises that helped me prepare for the [Cloud Foundry Certified Developer (CFCD)](https://training.linuxfoundation.org/certification/cloud-foundry-certified-developer-cfcd/) exam, offered by the Linux Foundation, organized by curriculum domain.
 
 During the exam, you are allowed to keep only one other browser tab open to access the following assets: 
 - [docs.cloudfoundry.org](https://docs.cloudfoundry.org/)
