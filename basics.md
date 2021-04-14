@@ -61,6 +61,30 @@ cf install-plugin ~/Downloads/cf-plugin
 </p>
 </details>
 
+### Connecte to the log stream of an app called 'my-app' and show the tailing log entries
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf logs my-app
+```
+
+</p>
+</details>
+
+### Show the recent logs of an app called 'my-app'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf logs my-app --recent
+```
+
+</p>
+</details>
+
 <!--What commands are not listed when using the cf -h?
 What does the cf target command do?
 What command would you use to list all spaces in your Cloud Foundry organization?
