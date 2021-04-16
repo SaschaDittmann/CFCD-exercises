@@ -72,29 +72,6 @@ cf push my-app -k 64M -m 64M -i 2
 </p>
 </details>
 
-### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 2 GB, Detect Buildpack) and map the follwing two routes 'app.cf-app.io' and 'app2.cf-app.io'. Deploy the app using the CF CLI.
-
-<details><summary>show</summary>
-<p>
-
-<b>manifest.yml</b>
-```yaml
-applications:
-- name: my-app
-  memory: 512M
-  disk_quota: 2G
-  routes:
-  - route: app.cf-app.io
-  - route: app2.cf-app.io
-```
-
-```bash
-cf push
-```
-
-</p>
-</details>
-
 ### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances). Ensure that http health checks will be run on /health. Deploy the app using the CF CLI.
 
 <details><summary>show</summary>
