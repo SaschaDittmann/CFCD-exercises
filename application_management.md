@@ -83,7 +83,7 @@ cf push
 </p>
 </details>
 
-### Create a 'manifests-multiple-apps.yml' file to deploy two apps. Both apps should have a Memory Limit of 512 MB and a Disk Limit 512 MB. The first app is called 'node-app', is located in the '~/node-app' folder, and needs two environment variables ('FIRST_NAME' with the value 'Han' and 'LAST_NAME' with the value 'Solo'). The second app is called 'java-app', and the 'java-app.jar' file is located in the '~/java-app/build/libs' folder. Deploy these appa using the CF CLI.
+### Create a 'manifests-multiple-apps.yml' file to deploy two apps. Both apps should have a Memory Limit of 512 MB and a Disk Limit 512 MB. The first app is called 'node-app' and is located in the '~/node-app' folder. The second app is called 'java-app', and the 'java-app.jar' file is located in the '~/java-app/build/libs' folder. Deploy these apps using the CF CLI.
 
 <details><summary>show</summary>
 <p>
@@ -96,9 +96,6 @@ disk_quota: 512M
 applications:
 - name: node-app
   path: ~/node-app/
-  env:
-    FIRST_NAME: Han
-    LAST_NAME: Solo
 - name: java-app
   path: ~/java-app/build/libs/java-app.jar
 ```
@@ -170,29 +167,6 @@ applications:
 
 ```bash
 cf push -f manifest-inherit.yml
-```
-
-</p>
-</details>
-
-### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances). Ensure that http health checks will be run on /health. Deploy the app using the CF CLI.
-
-<details><summary>show</summary>
-<p>
-
-<b>manifest.yml</b>
-```yaml
-applications:
-- name: my-app
-  memory: 512M
-  disk_quota: 512M
-  instances: 2
-  health-check-type: http
-  health-check-http-endpoint: /health
-```
-
-```bash
-cf push
 ```
 
 </p>
