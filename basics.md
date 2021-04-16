@@ -222,3 +222,51 @@ cf delete-space myspace -f
 
 </p>
 </details>
+
+### Rename a space called 'myspace' in the current organization to 'mynewspace'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf rename-space myspace mynewspace
+```
+
+</p>
+</details>
+
+### Prevent connecting with SSH to all apps in the space called 'myspace'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf disallow-space-ssh myspace
+```
+
+</p>
+</details>
+
+### Check if connecting with SSH to all apps in the space called 'myspace' is allowed.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf space-ssh-allowed myspace
+```
+
+</p>
+</details>
+
+### Allow SSH access to all apps in the space called 'myspace'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf allow-space-ssh myspace
+```
+
+</p>
+</details>
