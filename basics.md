@@ -151,7 +151,74 @@ cf target -s dev
 </p>
 </details>
 
-<!--What commands are not listed when using the cf -h?
-What does the cf target command do?
-What command would you use to list all spaces in your Cloud Foundry organization?
-What command would you use to list service offerings in the marketplace?-->
+### Create a new organization called 'myorg'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf create-org myorg
+```
+
+</p>
+</details>
+
+### Create a new organization called 'myorg'. Let the CF CLI prompted for confirmation.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf delete-org myorg
+```
+
+</p>
+</details>
+
+### Create a new space called 'myspace' in the current organization
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf create-space myspace
+```
+
+</p>
+</details>
+
+### Create a new space called 'myspace' in the organization called 'myorg'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf create-space myspace -o myorg
+```
+
+</p>
+</details>
+
+### Delete a space called 'myspace' in the current organization. Let the CF CLI prompted for confirmation.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf delete-space myspace
+```
+
+</p>
+</details>
+
+### Delete a space called 'myspace' in the current organization. Avoid being prompted for confirmation.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf delete-space myspace -f
+```
+
+</p>
+</details>
