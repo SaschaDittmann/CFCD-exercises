@@ -175,6 +175,29 @@ cf push -f manifest-inherit.yml
 </p>
 </details>
 
+### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances). Ensure that http health checks will be run on /health. Deploy the app using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+<b>manifest.yml</b>
+```yaml
+applications:
+- name: my-app
+  memory: 512M
+  disk_quota: 512M
+  instances: 2
+  health-check-type: http
+  health-check-http-endpoint: /health
+```
+
+```bash
+cf push
+```
+
+</p>
+</details>
+
 ### Stop an app called 'my-app' already running in Cloud Foundry
 
 <details><summary>show</summary>
