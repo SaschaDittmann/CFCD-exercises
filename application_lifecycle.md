@@ -95,6 +95,53 @@ cf push
 </p>
 </details>
 
+### Show the type of health check performed on an app called 'my-app'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf get-health-check my-app
+```
+
+</p>
+</details>
+
+### Add a http based health check to an existing app called 'my-app' using the CLI. Ensure that http health checks will be run on /health.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf set-health-check my-app http --endpoint /health
+cf rs my-app
+```
+
+</p>
+</details>
+
+### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances). The app is very large and requires up to 3 minutes to start. Deploy the app using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+<b>manifest.yml</b>
+```yaml
+applications:
+- name: my-app
+  memory: 512M
+  disk_quota: 512M
+  instances: 2
+  timeout: 180
+```
+
+```bash
+cf push
+```
+
+</p>
+</details>
+
 ### Create a 'manifest.yml' file to deploy an app called 'my-app' with a Memory Limit of 512 MB and a Disk Limit of 512 MB. The app is located in the '~/my-app' folder, and needs two environment variables ('FIRST_NAME' with the value 'Han' and 'LAST_NAME' with the value 'Solo'). Deploy these appa using the CF CLI.
 
 <details><summary>show</summary>
