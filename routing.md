@@ -54,3 +54,24 @@ cf push
 
 </p>
 </details>
+
+### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, Detect Buildpack). Ensure that no route will be assigned to the app. Deploy the app using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+<b>manifest.yml</b>
+```yaml
+applications:
+- name: my-app
+  memory: 512M
+  disk_quota: 512M
+  no-route: true
+```
+
+```bash
+cf push
+```
+
+</p>
+</details>
