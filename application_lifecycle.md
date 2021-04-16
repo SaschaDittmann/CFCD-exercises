@@ -72,6 +72,37 @@ cf push my-app -k 64M -m 64M -i 2
 </p>
 </details>
 
+### Create a new app named 'my-app', using the CF CLI, with the following settings (cflinuxfs3 Stack, default for everything else)
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf push my-app -s cflinuxfs3
+```
+
+</p>
+</details>
+
+### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (cflinuxfs3 Stack, default for everything else). Deploy the app using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+<b>manifest.yml</b>
+```yaml
+applications:
+- name: my-app
+  stack: cflinuxfs3
+```
+
+```bash
+cf push
+```
+
+</p>
+</details>
+
 ### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances). Ensure that http health checks will be run on /health. Deploy the app using the CF CLI.
 
 <details><summary>show</summary>
@@ -161,6 +192,32 @@ applications:
 
 ```bash
 cf push
+```
+
+</p>
+</details>
+
+### View all environment variables of an app called 'my-app'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf env my-app
+```
+
+</p>
+</details>
+
+### Set the environment variable called 'FIRST_NAME' to the value 'Luke', as well as an environment variable called 'LAST_NAME' to the value 'Skywalker', of an existing app called 'my-app' using CF CLI commands.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf set-env my-app FIRST_NAME Luke
+cf set-env my-app LAST_NAME Skywalker
+cf restage my-app
 ```
 
 </p>
