@@ -60,6 +60,18 @@ cf push
 </p>
 </details>
 
+### Deploy a new app named 'my-app' (with the default settings) using the CF CLI. Ensure that the application start with the following command 'bundle exec rake VERBOSE=true'.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf push my-app -c "bundle exec rake VERBOSE=true"
+```
+
+</p>
+</details>
+
 ### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances, Create Random Route, Start the application with 'node myapp.js', Detect Buildpack). Deploy the app using the CF CLI.
 
 <details><summary>show</summary>
