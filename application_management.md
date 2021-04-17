@@ -119,7 +119,7 @@ cf push -f manifests-multiple-apps.yml
 </p>
 </details>
 
-### Create a new app named 'my-app', using the docker image 'ghost', with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, Instances 2)
+### Create a new app named 'my-app', using the docker image 'ghost', with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, Instances 2). Use the 'cf push' command with the appropriate parameters.
 
 <details><summary>show</summary>
 <p>
@@ -154,7 +154,19 @@ cf push
 </p>
 </details>
 
-### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances, Docker Image 'cfcd.azurecr.io/cfcd:latest'). You need to login to the docker registry using the username 'cfcduser' and password 'cfcdpwd' Deploy the app using the CF CLI.
+### Create a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances, Docker Image 'cfcd.azurecr.io/cfcd:latest'). You need to login to the docker registry using the username 'cfcduser' and password 'cfcdpwd'. Use the 'cf push' command with the appropriate parameters.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+CF_DOCKER_PASSWORD=cfcdpwd cf push my-app -m 512M -k 512M -i 2 -o cfcd.azurecr.io/cfcd:latest --docker-username cfcduser
+```
+
+</p>
+</details>
+
+### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances, Docker Image 'cfcd.azurecr.io/cfcd:latest'). You need to login to the docker registry using the username 'cfcduser' and password 'cfcdpwd'. Deploy the app using the CF CLI.
 
 <details><summary>show</summary>
 <p>
