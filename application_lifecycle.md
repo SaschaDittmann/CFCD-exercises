@@ -119,6 +119,18 @@ cf push
 </p>
 </details>
 
+### Add a new buildpack called 'java_offline_buildpack' to the CF environment by using the CF CLI. Use the zip-file of the new buildpack 'java-buildpack-offline.zip' is located in the path 'build/'. Add it to position 23.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf create-buildpack java_offline_buildpack build/java-buildpack-offline.zip 23
+```
+
+</p>
+</details>
+
 ### You have received a report that a legacy buildpack named 'my_buildpack' has no stack record. Associate the stack 'cflinuxfs3' by using the CF CLI.
 
 <details><summary>show</summary>
@@ -126,6 +138,42 @@ cf push
 
 ```bash
 cf update-buildpack my_buildpack --assign-stack cflinuxfs3
+```
+
+</p>
+</details>
+
+### Disable a buildpack named 'my_buildpack' from being used for staging by using the CF CLI
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf update-buildpack my_buildpack --disable
+```
+
+</p>
+</details>
+
+### Rename a buildpack named 'my_buildpack' to 'my_old_buildpack' by using the CF CLI
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf rename-buildpack my_buildpack my_old_buildpack
+```
+
+</p>
+</details>
+
+### Prevent updates to an existing buildpack 'my_buildpack' by using the CF CLI 
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf update-buildpack my_buildpack --lock
 ```
 
 </p>
