@@ -72,6 +72,89 @@ cf push my-app -k 64M -m 64M -i 2
 </p>
 </details>
 
+### Create a new app named 'my-app', using the buildpacks 'my_first_buildpack', 'my_second_buildpack', 'my_final_buildpack' (applied in this order) with the default settings. Deploy the app using the 'cf push' command.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf push my-app -b my_first_buildpack -b my_second_buildpack -b my_final_buildpack
+```
+
+</p>
+</details>
+
+### Create a new app called 'java-app' by using the 'cf push' command with the default settings. The 'java-app.jar' file is located in the '~/java-app/build/libs' folder. Use the buildpack located in the Git repository 'https://github.com/cloudfoundry/java-buildpack.git'.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf push java-app -p '~/java-app/build/libs' -b https://github.com/cloudfoundry/java-buildpack.git
+```
+
+</p>
+</details>
+
+### You received a report that a buildpack called 'my_buildpack' is causing issues because it contacts the internet during staging and your CF environment must use proxy servers to do so. The address of your proxy server for HTTP requests is 'http://myproxysvr:8080' and for HTTPS requests 'https://myproxysvr:8080'. Create a 'manifest.yml' file for a new app named 'my-app' with the default settings. Deploy the app by using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+<b>manifest.yml</b>
+```yaml
+applications:
+- name: my-app
+  env:
+    http_proxy: http://myproxysvr:8080
+    https_proxy: https://myproxysvr:8080
+  buildpacks:
+  - my_buildpack
+```
+
+```bash
+cf push
+```
+
+</p>
+</details>
+
+### You have received a report that a legacy buildpack named 'my_buildpack' has no stack record. Associate the stack 'cflinuxfs3' by using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf update-buildpack my_buildpack --assign-stack cflinuxfs3
+```
+
+</p>
+</details>
+
+### Delete the buildpacks named 'my_buildpack' by using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf delete-buildpack my_buildpack
+```
+
+</p>
+</details>
+
+### You have two buildpacks named 'my_buildpack', one associated with 'stack_a' and the other associated with no (nil) stack association. Delete the buildpack that uses 'stack_a' by using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf delete-buildpack my_buildpack -s stack_a
+```
+
+</p>
+</details>
+
 ### Create a new app named 'my-app', using the CF CLI, with the following settings (cflinuxfs3 Stack, default for everything else)
 
 <details><summary>show</summary>
