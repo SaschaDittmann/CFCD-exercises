@@ -154,6 +154,30 @@ cf push
 </p>
 </details>
 
+### Create a 'manifest.yml' file for a new app named 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances, Docker Image 'cfcd.azurecr.io/cfcd:latest'). You need to login to the docker registry using the username 'cfcduser' and password 'cfcdpwd' Deploy the app using the CF CLI.
+
+<details><summary>show</summary>
+<p>
+
+<b>manifest.yml</b>
+```yaml
+applications:
+- name: my-app
+  memory: 512M
+  disk_quota: 512M
+  instances: 2
+  docker:
+    image: cfcd.azurecr.io/cfcd:latest
+    username: cfcduser
+```
+
+```bash
+CF_DOCKER_PASSWORD=cfcdpwd cf push
+```
+
+</p>
+</details>
+
 ### Create two manifest files. The first file is called 'base-manifest.yml' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 2 Instances). The second file is called 'manifest-inherit.yml', inherit the settings of the first file, as well as defines an app called 'my-app' with the following settings (Memory Limit 512 MB, Disk Limit 512 MB, 3 Instances, environment variables 'FIRST_NAME' with the value 'Han' and 'LAST_NAME' with the value 'Solo', Detect Buildpack). Deploy the app using the CF CLI.
 
 <details><summary>show</summary>
@@ -350,6 +374,18 @@ cf scale my-app -m 512M
 
 ```bash
 cf scale my-app -k 1G
+```
+
+</p>
+</details>
+
+### Create an app manifest file 'manifest.yml' from an existing app called 'my-app'
+
+<details><summary>show</summary>
+<p>
+
+```bash
+cf create-app-manifest my-app -p manifest.yml
 ```
 
 </p>
